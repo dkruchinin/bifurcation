@@ -1,0 +1,36 @@
+h1 {
+  text-align: center;
+}
+
+button {
+  position: absolute;
+  left: calc(50% + 400px);
+}
+
+.bifurcation-container {
+  margin: auto;
+  width: 800px;
+  height: 600px;
+}
+
+.logistic-map-container {
+  margin: auto;
+  width: 800px;
+  height:300px;
+
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.slidecontainer {
+  width: 50%; /* Width of the outside container */
+  float:left;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.svg-plot, .canvas-plot {
+    position: absolute;
+}

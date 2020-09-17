@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+    <script src="https://github.com/chartjs/Chart.js/releases/download/v2.9.3/Chart.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.css" integrity="sha384-L/SNYu0HM7XECWBeshTGLluQO9uVI1tvkCtunuoUbCHHoTH76cDyXty69Bb9I0qZ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/katex.min.js" integrity="sha384-ad+n9lzhJjYgO67lARKETJH6WuQVDDlRfj81AJJSswMyMkXTD49wBj5EP004WOY6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0-beta/contrib/auto-render.min.js" integrity="sha384-EkJr57fExjeMKAZnlVBuoBoX0EJ4BiDPiAd/JyTzIA65ORu4hna7V6aaq4zsUvJ2" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="logistic-map-container">
+        <h1>Logistic map: $x_{n+1} = rx_n(1 - x_n)$</h1>
+        <canvas id="logistic-map"></canvas>
+            <div class="slidecontainer">
+                <b>r: </b><input
+                    type="range" min="0.1"
+                    max="4" step="0.01" value="1.5"
+                    class="slider" id="r_scale"
+                >
+                : <text id="r_value" style="inline">1.5</text>
+            </div>
+            <div class="slidecontainer">
+                <b>$x_0$: </b><input
+                    type="range" min="0.0" max="1"
+                    step="0.01" value="0.2"
+                    class="slider" id="x0_scale"
+                >
+                <text id="x0_value" style="inline">0.2</text>
+            </div>
+    </div>
+
+    <script src="./logistic_map.js"></script>
+    <script>
+        renderMathInElement(document.body,{delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\[", right: "\]", display: true},
+            {left: "$", right: "$", display: false}
+       ]});
+        renderMathInElement(document.body);
+
+    </script>
+</body>
+</html>
