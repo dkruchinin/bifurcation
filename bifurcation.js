@@ -1,3 +1,5 @@
+// d3 zooming code is taken pretty much as is from
+// https://github.com/xoor-io/d3-canvas-example/tree/master/03_scatterplot_with_box_zoom
 const pointColor = '#3585ff'
 const margin = {top: 20, right: 15, bottom: 60, left: 70};
 const outerWidth = 800;
